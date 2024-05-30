@@ -54,5 +54,13 @@
  </aside>
 
  <div class="h-screen w-full pl-52">
+    <div class="p-3 flex gap-2 items-center">
+        <button class="bg-[#008080] p-1 rounded hover:bg-[#79b0b0]" onclick="setTool('brush')">Pincel</button>
+        <button class="bg-[#008080] p-1 rounded hover:bg-[#79b0b0]" onclick="setTool('eraser')">Borrador</button>
+        <label for="colorPicker">Color:</label>
+        <input type="color" id="colorPicker" onchange="setColor(this.value)">
+        <label for="brushSize">Tamaño del pincel:</label>
+        <input type="range" id="brushSize" min="1" max="50" value="5" onchange="setBrushSize(this.value)">
+    </div>
     <app-draw-area />
  </div>
